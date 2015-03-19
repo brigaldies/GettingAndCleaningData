@@ -76,7 +76,7 @@ run_analysis <- function(directory, destinationFile, debug = FALSE, ...) {
 # 1. Checks that the directory and the data set's files exist. Stops if
 #    something is amiss.
 # 
-# 2. Reads (fread) the feature labels file into a dplyr table, and selects the 
+# 2. Reads (fread) the feature labels file into a table, and selects the 
 #    features corresponding to mean and standard deviation measurements only.
 # 
 # 3. With the data in step #2, the function contructs two vectors of strings:
@@ -84,23 +84,23 @@ run_analysis <- function(directory, destinationFile, debug = FALSE, ...) {
 #    b. The "cleaned" feature names, with the characters '(', ')', and '-' 
 #       removed.
 # 
-# 4. Reads (read.table) the 'X' measurements into a dplyr table.
+# 4. Reads (read.table) the 'X' measurements into a table.
 # 
 # 5. a. Using the vector produced in step #3.a, the function selects the
 #       mean and std measurements only.
 #    b. Using the vector produced in step #3.b, The function set the column
 #       names using the "cleaned" feature names.
 #
-# 6. Reads (fread) the Y data into a dplyr table, and set the column name to
+# 6. Reads (fread) the Y data into a table, and set the column name to
 #    activity_number.
 # 
-# 7. Reads (fread) the activity labels file into a dplyr table, and set the 
+# 7. Reads (fread) the activity labels file into a table, and set the 
 #    column names to activity_number and activity_label.
 # 
 # 8. Adds the activity label to the Y table by inner-joining with the activity
 #    labels table obtained in step #7 on activity_number.
 #
-# 9. Reads (fread) the subject data into a dplyr table, and set the column name
+# 9. Reads (fread) the subject data into a table, and set the column name
 #    to subject_number.
 #
 # 10. Column-binds (bind_cols) Subject, Y, and X, and returns the result.
