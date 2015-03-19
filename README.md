@@ -26,6 +26,8 @@ The R code was successfully tested in both R Studio and the R Console.
 
 ### R Console Setup
 
+You can safely skip this section if you wil be running the analysis from R Studio.
+
 If you will be running the analysis in the **R Console**, configure R Console as follows:
 
 1. '--internet2' option
@@ -50,7 +52,7 @@ From R Studio or the R Console:
 
 1. Source the analysis' R code that will process the raw data.
 ```r
-source('source('https://raw.githubusercontent.com/brigaldies/GettingAndCleaningData/master/run_analysis.R')')
+source('https://raw.githubusercontent.com/brigaldies/GettingAndCleaningData/master/run_analysis.R')
 ```
 
 2. Run the analysis by executing the `run_analysis` R function as shown below.
@@ -68,6 +70,7 @@ The function's arguments are explained below:
 2. The second argument, `destinationFile = `, is the file the analysis writes the results to.
 3. The function supports the following additional and optional arguments:
     1. `debug = TRUE (or FALSE, by default)`, to set the debug mode. In debug mode, the function 
-    executes the `View()` function on the different intermediate data structures.
+    executes the `View` function on the different intermediate data structures.
     2. Any of the optional arguments in `write.table` that configures the output, for example, `sep = ","`
     to set the separator to the comma, or `quote = FALSE` to not have the double quotes around strings.
+    

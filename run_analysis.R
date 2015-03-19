@@ -9,7 +9,9 @@
 #                  the output (e.g., separator).
 # 
 # The function performs the following:
+# 
 # (Steps 1 through 5 are performed by the createTidyData function)
+# 
 # 1. Loads, tidies, and merges the training and the test sets to create a
 #    single tidy data set.
 # 
@@ -22,7 +24,7 @@
 # 
 # 5. Labels the data set with descriptive variable names. 
 #
-# 6. Group the tidy data by activity label.
+# 6. Group the tidy data by activity label, and subject number.
 # 
 # 7. Summarize the data by calculating the mean for every measurement.
 #
@@ -36,7 +38,7 @@
 #
 # 3. The reading of the X measurements with read.table is a bit slow. The faster
 #    fread() alternative does not work as fread() does not separate columns
-#    properly in the "X_" files. Evidently, the presence of two or more spaces
+#    consistently in the "X_" files. Evidently, the presence of two or more spaces
 #    between columns causes fread() to report an 'na' column value between each
 #    space, while read.table() happily consumes all spaces between values.
 # ------------------------------------------------------------------------------
@@ -51,7 +53,7 @@ run_analysis <- function(directory, destinationFile, debug = FALSE, ...) {
         message("Merging 'train' and 'test', grouping by activity, and calculating the means")
         analysis <- 
             bind_rows(train, test) %>%
-            group_by(activity_label) %>%
+            group_by(activity_label, subject_number) %>%
             summarise_each(funs(mean))
         if (debug) View(analysis)
         message(paste('Writing the analysis results to', destinationFile))
@@ -97,8 +99,11 @@ run_analysis <- function(directory, destinationFile, debug = FALSE, ...) {
 # 
 # 8. Adds the activity label to the Y table by inner-joining with the activity
 #    labels table obtained in step #7 on activity_number.
-# 
-# 9. Column-binds (bind_cols) X and Y, and returns the result.
+#
+# 9. Reads (fread) the subject data into a dplyr table, and set the column name
+#    to subject_number.
+#
+# 10. Column-binds (bind_cols) Subject, Y, and X, and returns the result.
 # ------------------------------------------------------------------------------
 createTidyData <- function(directory, datasetName, debug = FALSE) {
     
@@ -203,9 +208,15 @@ createTidyData <- function(directory, datasetName, debug = FALSE) {
         select(-activity_number) # Remove the activity number.
     if (debug) View(y)
     
-    # 9.Column-Bind x and y
-    message('Binding X and Y')
-    x <- bind_cols(x, y) 
+    # 9. Read the subject data
+    subject_dt <- fread(subject_data_file)
+    setNames(subject_dt, c('subject_number'))
+    subject <- tbl_df(subject_dt)
+    rm(subject_dt)
+    
+    # 10. Column-Bind x, y, and subject
+    message('Binding X, Y, and Subjects')
+    x <- bind_cols(subject, y, x) 
         
     # Return the final tidy data set.
     x
