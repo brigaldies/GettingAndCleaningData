@@ -1,4 +1,4 @@
-## Data Dictionary - Coursera Data Science Track, Getting And Cleaning Data, Class Project
+## Code Book - Coursera Data Science Track, Getting And Cleaning Data, Class Project
 
 March 18th, 2015
 
@@ -77,74 +77,80 @@ As in the raw data, the 30 measured subjects are identified by a number, from 1 
 
 Variable | Description
 -------- | -----------
-activity_label | The label of the activity (Walking, sitting, etc.) See the possible activity codes and labels in the previous section.
-subject_number | Subject number
-tBodyAccmeanX | By activity and subject-grouped **mean** of the time-domain X-axis body acceleration mean
-tBodyAccmeanY | By activity and subject-grouped **mean** of the time-domain Y-axis body acceleration mean
-tBodyAccmeanZ | By activity and subject-grouped **mean** of the time-domain Z-axis body acceleration mean
-tBodyAccstdX | By activity and subject-grouped **mean** of the time-domain X-axis body acceleration standard deviation
-tBodyAccstdY | By activity and subject-grouped **mean** of the time-domain Y-axis body acceleration standard deviation
-tBodyAccstdZ | By activity and subject-grouped **mean** of the time-domain Z-axis body acceleration standard deviation
-tGravityAccmeanX | By activity and subject-grouped **mean** of the time-domain X-axis gravity acceleration mean
-tGravityAccmeanY | By activity and subject-grouped **mean** of the time-domain Y-axis gravity acceleration mean
-tGravityAccmeanZ | By activity and subject-grouped **mean** of the time-domain Z-axis gravity acceleration mean
-tGravityAccstdX | By activity and subject-grouped **mean** of the time-domain X-axis gravity acceleration standard deviation
-tGravityAccstdY | By activity and subject-grouped **mean** of the time-domain Y-axis gravity acceleration standard deviation
-tGravityAccstdZ | By activity and subject-grouped **mean** of the time-domain Z-axis gravity acceleration standard deviation
-tBodyAccJerkmeanX | By activity and subject-grouped **mean** of the time-domain X-axis body acceleration jerk mean
-tBodyAccJerkmeanY | By activity and subject-grouped **mean** of the time-domain Y-axis body acceleration jerk mean
-tBodyAccJerkmeanZ | By activity and subject-grouped **mean** of the time-domain Z-axis body acceleration jerk mean
-tBodyAccJerkstdX | By activity and subject-grouped **mean** of the time-domain X-axis body acceleration jerk standard deviation
-tBodyAccJerkstdY | By activity and subject-grouped **mean** of the time-domain Y-axis body acceleration jerk standard deviation
-tBodyAccJerkstdZ | By activity and subject-grouped **mean** of the time-domain Z-axis body acceleration jerk standard deviation
-tBodyGyromeanX | By activity and subject-grouped **mean** of the time-domain X-axis body angular velocity mean
-tBodyGyromeanY | By activity and subject-grouped **mean** of the time-domain Y-axis body angular velocity mean
-tBodyGyromeanZ | By activity and subject-grouped **mean** of the time-domain Z-axis body angular velocity mean
-tBodyGyrostdX | By activity and subject-grouped **mean** of the time-domain X-axis body angular velocity standard deviation
-tBodyGyrostdY | By activity and subject-grouped **mean** of the time-domain Y-axis body angular velocity standard deviation
-tBodyGyrostdZ | By activity and subject-grouped **mean** of the time-domain Z-axis body angular velocity standard deviation
-tBodyGyroJerkmeanX | By activity and subject-grouped **mean** of the time-domain X-axis body angular velocity jerk mean
-tBodyGyroJerkmeanY | By activity and subject-grouped **mean** of the time-domain Y-axis body angular velocity jerk mean
-tBodyGyroJerkmeanZ | By activity and subject-grouped **mean** of the time-domain Z-axis body angular velocity jerk mean
-tBodyGyroJerkstdX | By activity and subject-grouped **mean** of the time-domain X-axis body angular velocity jerk standard deviation
-tBodyGyroJerkstdY | By activity and subject-grouped **mean** of the time-domain Y-axis body angular velocity jerk standard deviation
-tBodyGyroJerkstdZ | By activity and subject-grouped **mean** of the time-domain Z-axis body angular velocity jerk standard deviation
-tBodyAccMagmean | By activity and subject-grouped **mean** of the time-domain body acceleration magnitude mean
-tBodyAccMagstd | By activity and subject-grouped **mean** of the time-domain body acceleration magnitude standard deviation
-tGravityAccMagmean | By activity and subject-grouped **mean** of the time-domain gravity acceleration magnitude mean
-tGravityAccMagstd | By activity and subject-grouped **mean** of the time-domain gravity acceleration magnitude standard deviation
-tBodyAccJerkMagmean | By activity and subject-grouped **mean** of the time-domain body acceleration jerk magnitude mean
-tBodyAccJerkMagstd | By activity and subject-grouped **mean** of the time-domain body acceleration jerk magnitude standard deviation
-tBodyGyroMagmean | By activity and subject-grouped **mean** of the time-domain body angular velocity magnitude mean
-tBodyGyroMagstd | By activity and subject-grouped **mean** of the time-domain body angular velocity magnitude standard deviation
-tBodyGyroJerkMagmean | By activity and subject-grouped **mean** of the time-domain body angular velocity magnitude jerk mean
-tBodyGyroJerkMagstd | By activity and subject-grouped **mean** of the time-domain body angular velocity magnitude jerk standard deviation
-fBodyAccmeanX | By activity and subject-grouped **mean** of the frequency-domain X-axis body acceleration mean
-fBodyAccmeanY | By activity and subject-grouped **mean** of the frequency-domain Y-axis body acceleration mean
-fBodyAccmeanZ | By activity and subject-grouped **mean** of the frequency-domain Z-axis body acceleration mean
-fBodyAccstdX | By activity and subject-grouped **mean** of the frequency-domain X-axis body acceleration standard deviation
-fBodyAccstdY | By activity and subject-grouped **mean** of the frequency-domain Y-axis body acceleration standard deviation
-fBodyAccstdZ | By activity and subject-grouped **mean** of the frequency-domain Z-axis body acceleration standard deviation
-fBodyAccJerkmeanX | By activity and subject-grouped **mean** of the frequency-domain X-axis body acceleration jerk mean
-fBodyAccJerkmeanY | By activity and subject-grouped **mean** of the frequency-domain Y-axis body acceleration jerk mean
-fBodyAccJerkmeanZ | By activity and subject-grouped **mean** of the frequency-domain Z-axis body acceleration jerk mean
-fBodyAccJerkstdX | By activity and subject-grouped **mean** of the frequency-domain X-axis body acceleration jerk standard deviation
-fBodyAccJerkstdY | By activity and subject-grouped **mean** of the frequency-domain Y-axis body acceleration jerk standard deviation
-fBodyAccJerkstdZ | By activity and subject-grouped **mean** of the frequency-domain Z-axis body acceleration jerk standard deviation
-fBodyGyromeanX | By activity and subject-grouped **mean** of the frequency-domain X-axis body angular velocity mean
-fBodyGyromeanY | By activity and subject-grouped **mean** of the frequency-domain Y-axis body angular velocity mean
-fBodyGyromeanZ | By activity and subject-grouped **mean** of the frequency-domain Z-axis body angular velocity mean
-fBodyGyrostdX | By activity and subject-grouped **mean** of the frequency-domain X-axis body angular velocity standard deviation
-fBodyGyrostdY | By activity and subject-grouped **mean** of the frequency-domain Y-axis body angular velocity standard deviation
-fBodyGyrostdZ | By activity and subject-grouped **mean** of the frequency-domain Z-axis body angular velocity standard deviation
-fBodyAccMagmean | By activity and subject-grouped **mean** of the frequency-domain body acceleration magnitude mean
-fBodyAccMagstd | By activity and subject-grouped **mean** of the frequency-domain body acceleration magnitude standard deviation
-fBodyBodyAccJerkMagmean | By activity and subject-grouped **mean** of the frequency-domain body acceleration magnitude jerk mean
-fBodyBodyAccJerkMagstd | By activity and subject-grouped **mean** of the frequency-domain body acceleration magnitude jerk standard deviation
-fBodyBodyGyroMagmean | By activity and subject-grouped **mean** of the frequency-domain body angular velocity magnitude mean
-fBodyBodyGyroMagstd | By activity and subject-grouped **mean** of the frequency-domain body angular velocity magnitude standard deviation
-fBodyBodyGyroJerkMagmean | By activity and subject-grouped **mean** of the frequency-domain body angular velocity magnitude jerk mean
-fBodyBodyGyroJerkMagstd | By activity and subject-grouped **mean** of the frequency-domain body angular velocity magnitude jerk standard deviation
+activitylabel | The label of the activity (Walking, sitting, etc.) See the possible activity codes and labels in the previous section.
+activitynumber | The activity number, which can be used for sorting by the "natural order" provided in activity_labels.txt (see note #1)
+subjectnumber | Subject number
+tbodyaccmeanx | By activity and subject-grouped **mean** of the time-domain X-axis body acceleration mean
+tbodyaccmeany | By activity and subject-grouped **mean** of the time-domain Y-axis body acceleration mean
+tbodyaccmeanz | By activity and subject-grouped **mean** of the time-domain Z-axis body acceleration mean
+tbodyaccstdx | By activity and subject-grouped **mean** of the time-domain X-axis body acceleration standard deviation
+tbodyaccstdy | By activity and subject-grouped **mean** of the time-domain Y-axis body acceleration standard deviation
+tbodyaccstdz | By activity and subject-grouped **mean** of the time-domain Z-axis body acceleration standard deviation
+tgravityaccmeanx | By activity and subject-grouped **mean** of the time-domain X-axis gravity acceleration mean
+tgravityaccmeany | By activity and subject-grouped **mean** of the time-domain Y-axis gravity acceleration mean
+tgravityaccmeanz | By activity and subject-grouped **mean** of the time-domain Z-axis gravity acceleration mean
+tgravityaccstdx | By activity and subject-grouped **mean** of the time-domain X-axis gravity acceleration standard deviation
+tgravityaccstdy | By activity and subject-grouped **mean** of the time-domain Y-axis gravity acceleration standard deviation
+tgravityaccstdz | By activity and subject-grouped **mean** of the time-domain Z-axis gravity acceleration standard deviation
+tbodyaccjerkmeanx | By activity and subject-grouped **mean** of the time-domain X-axis body acceleration jerk mean
+tbodyaccjerkmeany | By activity and subject-grouped **mean** of the time-domain Y-axis body acceleration jerk mean
+tbodyaccjerkmeanz | By activity and subject-grouped **mean** of the time-domain Z-axis body acceleration jerk mean
+tbodyaccjerkstdx | By activity and subject-grouped **mean** of the time-domain X-axis body acceleration jerk standard deviation
+tbodyaccjerkstdy | By activity and subject-grouped **mean** of the time-domain Y-axis body acceleration jerk standard deviation
+tbodyaccjerkstdz | By activity and subject-grouped **mean** of the time-domain Z-axis body acceleration jerk standard deviation
+tbodygyromeanx | By activity and subject-grouped **mean** of the time-domain X-axis body angular velocity mean
+tbodygyromeany | By activity and subject-grouped **mean** of the time-domain Y-axis body angular velocity mean
+tbodygyromeanz | By activity and subject-grouped **mean** of the time-domain Z-axis body angular velocity mean
+tbodygyrostdx | By activity and subject-grouped **mean** of the time-domain X-axis body angular velocity standard deviation
+tbodygyrostdy | By activity and subject-grouped **mean** of the time-domain Y-axis body angular velocity standard deviation
+tbodygyrostdz | By activity and subject-grouped **mean** of the time-domain Z-axis body angular velocity standard deviation
+tbodygyrojerkmeanx | By activity and subject-grouped **mean** of the time-domain X-axis body angular velocity jerk mean
+tbodygyrojerkmeany | By activity and subject-grouped **mean** of the time-domain Y-axis body angular velocity jerk mean
+tbodygyrojerkmeanz | By activity and subject-grouped **mean** of the time-domain Z-axis body angular velocity jerk mean
+tbodygyrojerkstdx | By activity and subject-grouped **mean** of the time-domain X-axis body angular velocity jerk standard deviation
+tbodygyrojerkstdy | By activity and subject-grouped **mean** of the time-domain Y-axis body angular velocity jerk standard deviation
+tbodygyrojerkstdz | By activity and subject-grouped **mean** of the time-domain Z-axis body angular velocity jerk standard deviation
+tbodyaccmagmean | By activity and subject-grouped **mean** of the time-domain body acceleration magnitude mean
+tbodyaccmagstd | By activity and subject-grouped **mean** of the time-domain body acceleration magnitude standard deviation
+tgravityaccmagmean | By activity and subject-grouped **mean** of the time-domain gravity acceleration magnitude mean
+tgravityaccmagstd | By activity and subject-grouped **mean** of the time-domain gravity acceleration magnitude standard deviation
+tbodyaccjerkmagmean | By activity and subject-grouped **mean** of the time-domain body acceleration jerk magnitude mean
+tbodyaccjerkmagstd | By activity and subject-grouped **mean** of the time-domain body acceleration jerk magnitude standard deviation
+tbodygyromagmean | By activity and subject-grouped **mean** of the time-domain body angular velocity magnitude mean
+tbodygyromagstd | By activity and subject-grouped **mean** of the time-domain body angular velocity magnitude standard deviation
+tbodygyrojerkmagmean | By activity and subject-grouped **mean** of the time-domain body angular velocity magnitude jerk mean
+tbodygyrojerkmagstd | By activity and subject-grouped **mean** of the time-domain body angular velocity magnitude jerk standard deviation
+fbodyaccmeanx | By activity and subject-grouped **mean** of the frequency-domain X-axis body acceleration mean
+fbodyaccmeany | By activity and subject-grouped **mean** of the frequency-domain Y-axis body acceleration mean
+fbodyaccmeanz | By activity and subject-grouped **mean** of the frequency-domain Z-axis body acceleration mean
+fbodyaccstdx | By activity and subject-grouped **mean** of the frequency-domain X-axis body acceleration standard deviation
+fbodyaccstdy | By activity and subject-grouped **mean** of the frequency-domain Y-axis body acceleration standard deviation
+fbodyaccstdz | By activity and subject-grouped **mean** of the frequency-domain Z-axis body acceleration standard deviation
+fbodyaccjerkmeanx | By activity and subject-grouped **mean** of the frequency-domain X-axis body acceleration jerk mean
+fbodyaccjerkmeany | By activity and subject-grouped **mean** of the frequency-domain Y-axis body acceleration jerk mean
+fbodyaccjerkmeanz | By activity and subject-grouped **mean** of the frequency-domain Z-axis body acceleration jerk mean
+fbodyaccjerkstdx | By activity and subject-grouped **mean** of the frequency-domain X-axis body acceleration jerk standard deviation
+fbodyaccjerkstdy | By activity and subject-grouped **mean** of the frequency-domain Y-axis body acceleration jerk standard deviation
+fbodyaccjerkstdz | By activity and subject-grouped **mean** of the frequency-domain Z-axis body acceleration jerk standard deviation
+fbodygyromeanx | By activity and subject-grouped **mean** of the frequency-domain X-axis body angular velocity mean
+fbodygyromeany | By activity and subject-grouped **mean** of the frequency-domain Y-axis body angular velocity mean
+fbodygyromeanz | By activity and subject-grouped **mean** of the frequency-domain Z-axis body angular velocity mean
+fbodygyrostdx | By activity and subject-grouped **mean** of the frequency-domain X-axis body angular velocity standard deviation
+fbodygyrostdy | By activity and subject-grouped **mean** of the frequency-domain Y-axis body angular velocity standard deviation
+fbodygyrostdz | By activity and subject-grouped **mean** of the frequency-domain Z-axis body angular velocity standard deviation
+fbodyaccmagmean | By activity and subject-grouped **mean** of the frequency-domain body acceleration magnitude mean
+fbodyaccmagstd | By activity and subject-grouped **mean** of the frequency-domain body acceleration magnitude standard deviation
+fbodybodyaccjerkmagmean | By activity and subject-grouped **mean** of the frequency-domain body acceleration magnitude jerk mean
+fbodybodyaccjerkmagstd | By activity and subject-grouped **mean** of the frequency-domain body acceleration magnitude jerk standard deviation
+fbodybodygyromagmean | By activity and subject-grouped **mean** of the frequency-domain body angular velocity magnitude mean
+fbodybodygyromagstd | By activity and subject-grouped **mean** of the frequency-domain body angular velocity magnitude standard deviation
+fbodybodygyrojerkmagmean | By activity and subject-grouped **mean** of the frequency-domain body angular velocity magnitude jerk mean
+fbodybodygyrojerkmagstd | By activity and subject-grouped **mean** of the frequency-domain body angular velocity magnitude jerk standard deviation
+
+Notes:
+1. Although the variables "activitylabel" and "activitynumber" measure the same variable, i.e., the activity, we are still
+considering the data as "tidy" since the activity number can be used to sort based on the "natural order" provided in the
+activity_labels.txt file. For example, see step F in the data processing algorithm described in the next section.
 
 ### Data Processing Algorithm
 
@@ -173,4 +179,8 @@ C. Groups the train-and-test-merged tidy data by activity label and subject numb
 
 D. Calculates the mean of all measurements, grouped by activity label and subject number.
 
-E. Writes the calculated means to a file, whose name was provided as an argument to the function run_analysis.
+E. Ungroup the resulting data in order to be able to arrange (See [article on interaction between dplyr group_by and arrange](http://stackoverflow.com/questions/26555297/dplyr-arrange-a-grouped-df-by-group-variable-not-working))
+
+F. Arrange based on ascending activity and subject numbers.
+
+G. Writes the calculated means to a file, whose name was provided as an argument to the function run_analysis.

@@ -50,11 +50,13 @@ run_analysis <- function(directory, destinationFile, debug = FALSE, ...) {
         message("Create tidy data for the 'test' dataset...")
         test <- createTidyData(directory, 'test', debug)
         if (debug) View(test)
-        message("Merging 'train' and 'test', grouping by activity, and calculating the means")
+        message("Merging 'train' and 'test', grouping by activity and subject, and calculating the means")
         analysis <- 
             bind_rows(train, test) %>%
-            group_by(activity_label, subject_number) %>%
-            summarise_each(funs(mean))
+            group_by(activitynumber, activitylabel, subjectnumber) %>%
+            summarise_each(funs(mean)) %>%
+            ungroup() %>% # In order to sort
+            arrange(activitynumber, subjectnumber)
         if (debug) View(analysis)
         message(paste('Writing the analysis results to', destinationFile))
         write.table(analysis, destinationFile, ...)
@@ -161,7 +163,7 @@ createTidyData <- function(directory, datasetName, debug = FALSE) {
     # feature: The descriptive column name to replace the V<number> column with.
     f2 <- mutate(f1, 
                  vlabel = paste('V', number, sep=''), # V<number>
-                 feature = gsub('[()-]', '', label)) # Feature name without (,), and -
+                 feature = tolower(gsub('[()-]', '', label))) # Feature name without (,), and -
     rm(f1) # Cleanup
     if (debug) View(f2)
         
@@ -191,32 +193,31 @@ createTidyData <- function(directory, datasetName, debug = FALSE) {
     message(paste('Reading Y data in', y_data_file, '...'))
     y_dt <- fread(y_data_file)
     message(paste('Reading', y_data_file, 'done.'))
-    setnames(y_dt, c('activity_number'))
+    setnames(y_dt, c('activitynumber'))
     y <- tbl_df(y_dt)
     rm(y_dt)
     
     # 7. Read the activity labels.
     activity_labels <- fread(activity_labels_file)
     message('Activity labels loaded.')
-    setnames(activity_labels, c('activity_number', 'activity_label'))
+    setnames(activity_labels, c('activitynumber', 'activitylabel'))
     activity_labels <- tbl_df(activity_labels)
     
     # 8. Add the label column to y_train: Inner join on activity_number
     y <- 
         y %>% 
-        inner_join(activity_labels, by='activity_number') %>%
-        select(-activity_number) # Remove the activity number.
+        inner_join(activity_labels, by='activitynumber')
     if (debug) View(y)
     
     # 9. Read the subject data
     subject_dt <- fread(subject_data_file)
-    setNames(subject_dt, c('subject_number'))
+    setNames(subject_dt, c('subjectnumber'))
     subject <- tbl_df(subject_dt)
     rm(subject_dt)
     
     # 10. Column-Bind x, y, and subject
     message('Binding X, Y, and Subjects')
-    x <- bind_cols(subject, y, x) 
+    x <- bind_cols(y, subject, x) 
         
     # Return the final tidy data set.
     x
