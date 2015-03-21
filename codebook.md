@@ -54,6 +54,9 @@ measured variables in the raw data:
 The analysis groups the mean and standard deviation measurements by activity type (walking, sitting, etc.) and
 subject, and calculate the measurement average for each group.
 
+Because the analysis focuses on the means and standard deviations of the raw signals, the data in the "Inertial Signals"
+are ignored.
+
 The next section provides a complete list of the resulting variables.
 
 ### This Analysis Code Book
